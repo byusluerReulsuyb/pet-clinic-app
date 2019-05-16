@@ -4,9 +4,11 @@ import com.petclinic.byusluer.model.Owner;
 import com.petclinic.byusluer.model.Pet;
 import com.petclinic.byusluer.services.PetService;
 import com.sun.xml.internal.bind.v2.model.core.ID;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService{
 
     @Override
