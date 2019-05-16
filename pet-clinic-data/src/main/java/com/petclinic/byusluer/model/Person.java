@@ -2,6 +2,8 @@ package com.petclinic.byusluer.model;
 
 public class Person extends BaseEntity{
 
+    public Person() {
+    }
 
     private String firstName;
     private String lastName;
