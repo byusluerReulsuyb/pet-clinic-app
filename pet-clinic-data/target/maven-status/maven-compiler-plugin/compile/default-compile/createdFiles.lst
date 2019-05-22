@@ -1,9 +1,14 @@
-com/petclinic/byusluer/model/Person.class
 com/petclinic/byusluer/services/VetService.class
 com/petclinic/byusluer/model/BaseEntity.class
+com/petclinic/byusluer/services/map/OwnerServiceMap.class
+com/petclinic/byusluer/model/Owner.class
+com/petclinic/byusluer/services/CrudService.class
+com/petclinic/byusluer/services/PetService.class
+com/petclinic/byusluer/services/map/PetServiceMap.class
+com/petclinic/byusluer/model/Person.class
+com/petclinic/byusluer/services/map/VetServiceMap.class
 com/petclinic/byusluer/model/PetType.class
+com/petclinic/byusluer/services/map/AbstractMapService.class
 com/petclinic/byusluer/model/Pet.class
 com/petclinic/byusluer/services/OwnerService.class
 com/petclinic/byusluer/model/Vet.class
-com/petclinic/byusluer/model/Owner.class
-com/petclinic/byusluer/services/PetService.class
