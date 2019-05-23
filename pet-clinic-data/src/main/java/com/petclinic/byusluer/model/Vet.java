@@ -4,6 +4,10 @@ import java.util.Set;
 
 public class Vet extends  Person{
 
+    public Vet(String firstName, String lastName) {
+        super(firstName, lastName);
+    }
+
     private Set<Specialty> specialities;
 
     public Set<Specialty> getSpecialities() {
