@@ -2,10 +2,7 @@
 
 package com.petclinic.byusluer.bootstrap;
 import com.petclinic.byusluer.model.*;
-import com.petclinic.byusluer.services.OwnerService;
-import com.petclinic.byusluer.services.PetTypeService;
-import com.petclinic.byusluer.services.SpecialityService;
-import com.petclinic.byusluer.services.VetService;
+import com.petclinic.byusluer.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -20,13 +17,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -76,6 +75,15 @@ public class DataLoader implements CommandLineRunner {
         owner1.getPets().add(zinar);
 
         ownerService.save(owner1);
+
+        Visit ziNarVisit = new Visit();
+        ziNarVisit.setDate(LocalDate.now());
+        ziNarVisit.setDescription("routine check");
+        ziNarVisit.setPet(zinar);
+
+        zinar.getVisits().add(ziNarVisit);
+
+        visitService.save(ziNarVisit);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Veli");
