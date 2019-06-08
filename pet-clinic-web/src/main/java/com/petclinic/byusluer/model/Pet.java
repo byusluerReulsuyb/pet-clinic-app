@@ -2,6 +2,8 @@ package com.petclinic.byusluer.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "pets")
@@ -9,7 +11,6 @@ public class Pet  extends  BaseEntity {
 
     @Column(name = "name")
     private String name;
-
 
     @ManyToOne
     @JoinColumn(name="type_id")
@@ -20,7 +21,12 @@ public class Pet  extends  BaseEntity {
     private Owner owner;
 
     @Column(name = "birth_date")
-    private LocalDate birtDate;
+    private LocalDate birthDate;
+
+
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "pet")
+    private Set<Visit> visits = new HashSet<>();
 
 
     public String getName() {
@@ -32,11 +38,11 @@ public class Pet  extends  BaseEntity {
     }
 
     public LocalDate getBirtDate() {
-        return birtDate;
+        return birthDate;
     }
 
     public void setBirtDate(LocalDate birtDate) {
-        this.birtDate = birtDate;
+        this.birthDate = birtDate;
     }
 
     public PetType getPetType() {

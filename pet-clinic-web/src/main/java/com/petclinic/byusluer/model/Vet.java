@@ -12,6 +12,8 @@ public class Vet extends  Person{
     public Vet(String firstName, String lastName) {
         super(firstName, lastName);
     }
+
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name = "vet_id"),
                inverseJoinColumns = @JoinColumn(name = "speciality_id"))

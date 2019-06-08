@@ -1,7 +1,6 @@
 package com.petclinic.byusluer.controllers;
 
 
-import com.petclinic.byusluer.services.OwnerService;
 import com.petclinic.byusluer.services.VetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
