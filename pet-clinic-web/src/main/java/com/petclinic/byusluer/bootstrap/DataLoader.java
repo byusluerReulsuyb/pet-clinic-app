@@ -43,10 +43,18 @@ public class DataLoader implements CommandLineRunner {
 
     private void loadData() {
         PetType dog = new PetType();
+
+        PetType fish = new PetType();
+
+        fish.builder().name("Fish");
+        PetType savedFish = petTypeService.save(fish);
+
         dog.setName("Dog");
         PetType savedDog = petTypeService.save(dog);
 
         Specialty radiology = new Specialty();
+        Specialty cardiology = new Specialty();
+        cardiology.builder().description("cardiology");
         radiology.setDescription("Radiology");
 
         Specialty surgery = new Specialty();
@@ -58,6 +66,7 @@ public class DataLoader implements CommandLineRunner {
         Specialty savedRadiology = specialityService.save(radiology);
         Specialty savedSurgery = specialityService.save(surgery);
         Specialty savedDentistry = specialityService.save(dentistry);
+        Specialty savedcardiology = specialityService.save(cardiology);
 
 
         Owner owner1 = new Owner();
@@ -67,11 +76,14 @@ public class DataLoader implements CommandLineRunner {
         owner1.setCity("Oxford");
         owner1.setTelephone("2131313");
 
+        Owner owner3 = new Owner();
+        owner3.builder().firstName("Ali").lastName("tahinpekmez").address("Antalya").city("Ant").telephone("4343");
+
         Pet zinar = new Pet();
         zinar.setPetType(savedDog);
         zinar.setOwner(owner1);
         zinar.setName("Zınar");
-        zinar.setBirtDate(LocalDate.ofYearDay(1995, 39));
+        zinar.setBirthDate(LocalDate.ofYearDay(1995, 39));
         owner1.getPets().add(zinar);
 
         ownerService.save(owner1);
@@ -98,10 +110,12 @@ public class DataLoader implements CommandLineRunner {
 
         Pet susluMualla = new Pet();
         susluMualla.setPetType(savedCat);
-        susluMualla.setBirtDate(LocalDate.of(2016, 11, 14));
+        susluMualla.setBirthDate(LocalDate.of(2016, 11, 14));
         susluMualla.setName("susluMualla");
 
         owner2.getPets().add(susluMualla);
+
+
 
         susluMualla.setOwner(owner2);
 
@@ -110,12 +124,16 @@ public class DataLoader implements CommandLineRunner {
 
         System.out.println("Loaded owners");
 
-        Vet vet1 = new Vet("Zorby", "Pifor");
+        Vet vet1 = new Vet();
+        vet1.setFirstName("zinar");
+        vet1.setLastName("nafizbaligi");
 
 
         vetService.save(vet1);
 
-        Vet vet2 = new Vet("Lord", "Verty");
+        Vet vet2 = new Vet();
+        vet2.setFirstName("suslu");
+        vet2.setLastName("nafiz");
         vetService.save(vet2);
 
         vet1.getSpecialities().add(savedRadiology);
