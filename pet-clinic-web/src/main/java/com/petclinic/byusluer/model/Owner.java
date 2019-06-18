@@ -1,15 +1,9 @@
 package com.petclinic.byusluer.model;
 
 import lombok.*;
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
-
-
-
-
 
 @Getter
 @Setter
@@ -20,8 +14,9 @@ import java.util.Set;
 public class Owner extends Person {
 
     @Builder
-    public Owner(String firstName, String lastName, String address, Set<Pet> pets, String city, String telephone) {
-        super(firstName, lastName);
+    public Owner(Long id, String firstName, String lastName,
+                 String address, Set<Pet> pets, String city, String telephone) {
+        super(id, firstName, lastName);
         this.address = address;
         this.pets = pets;
         this.city = city;
