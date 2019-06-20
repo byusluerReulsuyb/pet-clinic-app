@@ -6,6 +6,7 @@
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/map/VetServiceMap.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/PetClinicAppApplication.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/map/PetServiceMap.java
+/Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/springdatajpa/VisitJPAService.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/springdatajpa/PetTypeJPAService.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/model/Pet.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/VetService.java
@@ -14,6 +15,7 @@
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/model/Person.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/model/Owner.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/bootstrap/DataLoader.java
+/Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/map/VisitServiceMap.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/repositories/PetRepository.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/springdatajpa/OwnerJPAService.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/map/SpecialityMapService.java
@@ -22,6 +24,7 @@
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/repositories/OwnerRepository.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/map/PetTypeServiceMap.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/repositories/VetRepository.java
+/Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/VisitService.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/PetTypeService.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/repositories/VisitRepository.java
 /Users/trusluel/Desktop/springProject/pet-clinic-app/pet-clinic-web/src/main/java/com/petclinic/byusluer/services/springdatajpa/PetJPAService.java
