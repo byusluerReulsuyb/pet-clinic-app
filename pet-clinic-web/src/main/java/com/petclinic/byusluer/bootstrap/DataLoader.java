@@ -3,13 +3,14 @@
 package com.petclinic.byusluer.bootstrap;
 import com.petclinic.byusluer.model.*;
 import com.petclinic.byusluer.services.*;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
-
+@Builder
 @Component // -> spring bean
 public class DataLoader implements CommandLineRunner {
 
@@ -70,23 +71,29 @@ public class DataLoader implements CommandLineRunner {
 
 
         Owner owner1 = new Owner();
-        owner1.setFirstName("Ali");
-        owner1.setLastName("AtaBak");
+        owner1.setFirstName("ali");
+        owner1.setLastName("atabak");
         owner1.setAddress("Baker Street, Oxford");
         owner1.setCity("Oxford");
         owner1.setTelephone("2131313");
 
-        Owner owner3 = new Owner();
-        owner3.builder().firstName("Ali").lastName("tahinpekmez").address("Antalya").city("Ant").telephone("4343");
+        Owner owner3 = Owner.builder().firstName("ali").city("atabak").address("atabak").lastName( "atabak").build();
+
+        Owner owner4 = new Owner();
+        owner4.builder().firstName("keklik").lastName("idimvurdular").address("kurabiyeli").address("Kazakistan").city("burdur").telephone("21342").build();
 
         Pet zinar = new Pet();
-        zinar.setPetType(savedDog);
-        zinar.setOwner(owner1);
+        Pet zinar3 = new Pet();
         zinar.setName("Zınar");
         zinar.setBirthDate(LocalDate.ofYearDay(1995, 39));
         owner1.getPets().add(zinar);
 
+        owner4.getPets().add(zinar3);
+
         ownerService.save(owner1);
+        ownerService.save(owner4);
+        ownerService.save(owner3);
+
 
         Visit ziNarVisit = new Visit();
         ziNarVisit.setDate(LocalDate.now());
